@@ -15,6 +15,8 @@ export class CardsComponent {
   @State() rightSlides: any = 0;
   @Element() private element: HTMLElement;
   @State() itemWidth = 220;
+  @State() timer: any;
+  
   componentWillLoad() {
     this.cards = [];
   }
@@ -35,7 +37,7 @@ export class CardsComponent {
     [].forEach.call(list, div => div.style.width = (itemsCount * this.itemWidth) + 'px');
     const visibleItems = parseInt((containerWidth / this.itemWidth).toString().split('.')[0]);
     this.rightSlides = itemsCount - visibleItems;
-
+    this.timer = setInterval(() => {this.MoveToRight(true)}, 2000);
 
   }
 
@@ -53,7 +55,7 @@ export class CardsComponent {
 
 
   }
-  MoveToRight() {
+  MoveToRight(fromTimer: boolean) {
     if (this.rightSlides > 0) {
       this.translateXval += this.itemWidth;      
       const list = this.element.querySelectorAll('.MultiCarousel-inner');
@@ -61,7 +63,9 @@ export class CardsComponent {
       this.leftSlides += 1;
       this.rightSlides -= 1;
     }
-
+    if(!fromTimer){
+      clearInterval(this.timer);
+    }
 
   }
 
@@ -79,7 +83,7 @@ export class CardsComponent {
           })}
         </div>
         <button class="btn btn-primary leftLst" onClick={() => this.MoveToLeft()} > > </button>
-        <button class="btn btn-primary rightLst" onClick={() => this.MoveToRight()}>></button>
+        <button class="btn btn-primary rightLst" onClick={() => this.MoveToRight(false)}>></button>
       </div>
     );
   }

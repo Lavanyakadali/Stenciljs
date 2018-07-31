@@ -1,0 +1,39 @@
+body{
+    font-family:"Accord Alternate","","sans-serif";
+    font-size:16px;
+    line-height:1.42857;
+    color:#333;
+    background-color:white;
+    word-break:keep-all
+}
+.gradient-orange{
+    background-color:#e35205 
+    !important
+}
+.gradient-orange-reverse{
+    background-color:#e35205 
+    !important
+}
+h2,.h2{
+    font-size:36px;
+    font-weight:200;
+    letter-spacing:-1px;
+    line-height:1;
+    color:#f4f4f4; 
+    word-wrap: break-word;
+    box-sizing: border-box;
+    font-family:"Accord Alternate";
+}
+
+.cta-banner-inner{
+    padding:70px 100px;
+    text-align:center;
+    color:white
+}
+.cta-banner-inner .title{
+    margin:0
+}
+.cta-banner-inner .subtitle{
+    margin:15px 0 0 0
+}
+

@@ -29,5 +29,5 @@ Suppose, if you find any bug in your dependency you will try to write a workarou
 
 ## Disadvantage of pinning dependency
 - Dependency Noise : Whenever there is an upgrade to one of your dependencies, you will get a request to update your package with latest version. It will be too noisy where there are too many deep dependency are getting updates. 
-- Pinning dependenc results in outdated dependencies
+- Pinning dependenc results in outdated dependencies. Refer [update outdated dependencies](https://github.com/Lavanyakadali/Stenciljs/blob/master/Documentation/Updating%20outdated%20dependencies.md)
 

@@ -28,6 +28,6 @@ Suppose, if you find any bug in your dependency you will try to write a workarou
 - You can pass on the exact dependencie versions (via Package-lock.json or Yarn-lock.json) which you have used during development to other developers so that it will be easy for them to install and run your project/package. 
 
 ## Disadvantage of pinning dependency
-Dependency Noise : Whenever there is an upgrade to one of your dependencies, you will get a request to update your package with latest version. It will be too noisy where there are too many deep dependency are getting updates. 
-
+- Dependency Noise : Whenever there is an upgrade to one of your dependencies, you will get a request to update your package with latest version. It will be too noisy where there are too many deep dependency are getting updates. 
+- Pinning dependenc results in outdated dependencies
 

@@ -40,9 +40,14 @@ Refer [Snyk CLI](https://snyk.io/docs/using-snyk/) for through understanding.
 - The Issues tab shows an inventory of all issues in your projects.
 - The dependencies tab displays an inventory of all your project’s dependencies, along with their version, license, and vulnerability status. 
 - Snyk creates a list of all the licenses used in your projects to help you with your license compliance. Some dependencies use multiple licenses, which are shown here separately.
+
 Refer [Snyk reports](https://snyk.io/docs/reports)
 
 ### JFrog Xray
+
+
+### NSP
+[NSP](https://www.npmjs.com/package/nsp)
 
 
 

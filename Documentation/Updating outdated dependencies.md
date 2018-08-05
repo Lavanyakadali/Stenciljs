@@ -10,7 +10,7 @@ Further read :
 - Refer [How to update local Packages](https://docs.npmjs.com/getting-started/updating-local-packages)
 - Refer [How to update global packages](https://docs.npmjs.com/getting-started/updating-global-packages)
 - Refer [npm check](https://www.npmjs.com/package/npm-check-interactive)
-  - npm check provides and interactive environment to update the outdated dependencicies and nofity you for unused dependencies.
+  - npm check provides and interactive environment to update the outdated dependencicies and notifies unused dependencies.
 - Refer [npm check updates](https://www.npmjs.com/package/npm-check-updates)
   - npm check update will update dependencies to the latest version regardless of existing version constraints provided in package.json, even package.json will be get updated with new dependency range. You should avoid using this feature, its always better to update and test a particular dependency.
 

@@ -23,7 +23,7 @@ yarn is yet to implement this feature, current it doesn't have any built in secu
 Discussions are still going on refer live discussion about [yarn audit](https://github.com/yarnpkg/yarn/issues/5808).
 
 ## External Packages which can identify known dependency security vulnerabilities.
-### snyk.io
+### Snyk.io
 Snyk supports testing and fixing Node.js projects that have their dependencies managed by npm or Yarn. 
 
 Snyk can connect directly to the applications you use daily to monitor your projects. Refer [Integrations](https://snyk.io/docs/) to find out through which you can run Snyk commands.

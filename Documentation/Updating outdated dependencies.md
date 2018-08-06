@@ -19,3 +19,9 @@ Further read :
 - Refer [yarn update](https://yarnpkg.com/en/docs/cli/upgrade)
 - Refer [yarn update-interactive](https://yarnpkg.com/en/docs/cli/upgrade-interactive)
   - yarn update-interactive is similar to npm check
+
+## Third party package
+ - [Greenkeeper](https://greenkeeper.io/)
+ 
+ [Alternative to GreenKeeper package for updating dependencies](https://alternativeto.net/software/greenkeeper/?platform=online)
+    

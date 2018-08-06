@@ -1,6 +1,6 @@
 #Lerna understanding
 
-[Lerna complete commands](https://github.com/lerna/lerna#--npm-client-client)
+[Lerna complete commands](https://www.npmjs.com/package/@stem/lerna) ([Alternative Link](https://github.com/lerna/lerna#--npm-client-client))
 
 [Lerna FAQ](https://github.com/lerna/lerna/blob/master/FAQ.md)
 

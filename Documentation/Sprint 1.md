@@ -86,7 +86,7 @@ Refer: [Xray pricing](https://jfrog.com/pricing/xray-pricing/)
 When you pin your dependencies eventually after sometime your project dependencies will be outdate. Either there will be a latest version (or) the version which you are using may not be available anymore for others to install to work on your project.
 To overcome this problem you need monitor your dependencies and update them when needed.
 
-Both npm and yarn have outdated command and also update command to update the dependencies to latest latest version based on the version range specified in the package.json file.
+Both npm and yarn have outdated command and also update command to update the dependencies to latest version based on the version range specified in the package.json file.
 
 Further read :
 
@@ -107,3 +107,4 @@ Further read :
 #### Third party package
  - [Greenkeeper](https://greenkeeper.io/)
 
+### Task 6: Standard Versioning

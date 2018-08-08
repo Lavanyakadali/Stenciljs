@@ -108,3 +108,13 @@ Further read :
  - [Greenkeeper](https://greenkeeper.io/)
 
 ### Task 6: Standard Versioning
+
+lets discuss why we are going with **Standard Version** when we have **Semantic release**
+
+**semantic-release** is a fully automated library/system for versioning, changelog generation, git tagging, and publishing to the npm registry. Refer [Semantic Release](https://github.com/semantic-release/semantic-release)
+
+**standard-version** is different because it handles the versioning, changelog generation, and git tagging for you **without** automatic pushing (to GitHub) or publishing (to an npm registry). Use of standard-version only affects your local git repo - it doesn't affect remote resources at all. After you run standard-version, you still have to ability to review things and correct mistakes if you want to.
+
+Refer: [Standard Version](https://www.npmjs.com/package/standard-version)
+
+### Task 7: Lerna

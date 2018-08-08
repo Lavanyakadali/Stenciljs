@@ -1,4 +1,4 @@
-#### Task 1: Absolute versioning vs Tilde versioning
+### Task 1: Absolute versioning vs Tilde versioning
 
 **Conclusion:** Possibility that Tilde might break your working code. So, Its always better to pin the dependencies because even thought you might think you will receive bug fixes using Tilde but its not really true if there are any minor or major updates you will definitely miss the fix. Going with Absolute versioning is a better approach for development.
 
@@ -12,7 +12,7 @@
 
 Refered from [Dependency Pinning](https://renovatebot.com/docs/dependency-pinning/)
 
-#### Task 2: Lock Files to pin dependencies
+### Task 2: Lock Files to pin dependencies
 Since both yarn and npm@5 both support lock files, it's a common question to ask "Why should I pin dependencies if I'm already using a lock file?". It's a good question!
 
 Dependencies which you are pinning in package.json are the once which you are directly using, but in reality those packages will also have many other dependencies. For this reason to lock deep dependencies Lock files are used.
@@ -25,7 +25,7 @@ A lock file will lock down the exact dependencies and sub-dependencies that your
 ##### For npm lock file refer [npm package locks](https://docs.npmjs.com/files/package-locks)
 ##### For yarn lock file refer [yarn lock](https://yarnpkg.com/lang/en/docs/yarn-lock/)
  
-#### Task 3: Security Vulnerability
+### Task 3: Security Vulnerability
 
 In a world where application dependency graphs are deeper than ever, secure engineering means more than securing your own software. Tracking vulnerabilities in your dependencies is just as important as securing your own software.
 
@@ -49,8 +49,8 @@ yarn is yet to implement this feature, current it doesn't have any built in secu
 
 Discussions are still going on refer live discussion about [yarn audit](https://github.com/yarnpkg/yarn/issues/5808).
 
-#### Task 4: External Packages which can identify known dependency security vulnerabilities.
-##### Snyk.io
+### Task 4: External Packages which can identify known dependency security vulnerabilities.
+#### Snyk.io
 Snyk supports testing and fixing Node.js projects that have their dependencies managed by npm or Yarn. 
 
 Snyk can connect directly to the applications you use daily to monitor your projects. Refer [Integrations](https://snyk.io/docs/) to find out through which you can run Snyk commands.
@@ -70,3 +70,4 @@ Refer [Snyk CLI](https://snyk.io/docs/using-snyk/) for through understanding.
 
 Refer [Snyk reports](https://snyk.io/docs/reports)
 
+#### JFrog Xray

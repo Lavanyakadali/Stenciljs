@@ -39,7 +39,7 @@ Now we will see what different options available for both npm and yarn.
 
 ##### npm
 
-Knowing the seviarity of dependency vulnerability, npm released a built in security feature( **npm audit**) when they released npm@6 on April 24th 2018 (Refer: [Announcing npm@6](https://blog.npmjs.org/post/173260195980/announcing-npm6)).
+Knowing the severity of dependency vulnerability, npm released a built in security feature( **npm audit**) when they released npm@6 on April 24th 2018 (Refer: [Announcing npm@6](https://blog.npmjs.org/post/173260195980/announcing-npm6)).
 
 npm audit (Refer [npm security audit](https://docs.npmjs.com/getting-started/running-a-security-audit) for through understanding).
 
@@ -50,7 +50,7 @@ yarn is yet to implement this feature, current it doesn't have any built in secu
 Discussions are still going on refer live discussion about [yarn audit](https://github.com/yarnpkg/yarn/issues/5808).
 
 ### Task 4: External Packages which can identify known dependency security vulnerabilities.
-#### Snyk.io
+#### 1. Snyk.io
 Snyk supports testing and fixing Node.js projects that have their dependencies managed by npm or Yarn. 
 
 Snyk can connect directly to the applications you use daily to monitor your projects. Refer [Integrations](https://snyk.io/docs/) to find out through which you can run Snyk commands.
@@ -70,4 +70,16 @@ Refer [Snyk CLI](https://snyk.io/docs/using-snyk/) for through understanding.
 
 Refer [Snyk reports](https://snyk.io/docs/reports)
 
-#### JFrog Xray
+#### 2. JFrog Xray
+JFrog has JFrog Xray to handle Security Vulnerabilities. Further read can be found here [npm xray](https://jfrog.com/integration/npm-xray/)
+
+Xray is integrated with Snyc database. Xray and Snyk work together to detect vulnerabilities during the build process which minimizes the cost of remediation since it can be implemented early in the SDLC. But even if your builds get past Xray and Snyk, new vulnerabilities are discovered all the time. Fortunately, JFrog continuously updates JXray including adding new vulnerabilities from Snyk’s Basic database, and each time your build artifacts are scanned, the latest vulnerabilities will be exposed in JFrog Xray.
+
+Refer: [Snyk Up on Vulnerabilities and Eradicate Them](https://jfrog.com/blog/snyk-vulnerabilities-eradicate/)
+
+**As per our analysis JFrog Xray is better comparted to Snyc.**
+
+**Pricing model:** Xray will come along with Artifatory from "ARTIFACTORY PRO X" package
+Refer: [Xray pricing](https://jfrog.com/pricing/xray-pricing/)
+
+

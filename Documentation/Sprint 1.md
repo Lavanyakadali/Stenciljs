@@ -37,13 +37,13 @@ Its your responsibility to frequently monitor your dependencies for any known Se
 
 Now we will see what different options available for both npm and yarn. 
 
-##### npm
+#### npm
 
 Knowing the severity of dependency vulnerability, npm released a built in security feature( **npm audit**) when they released npm@6 on April 24th 2018 (Refer: [Announcing npm@6](https://blog.npmjs.org/post/173260195980/announcing-npm6)).
 
 npm audit (Refer [npm security audit](https://docs.npmjs.com/getting-started/running-a-security-audit) for through understanding).
 
-##### yarn
+#### yarn
 
 yarn is yet to implement this feature, current it doesn't have any built in security feature to identify dependency security vulnerabilities.
 
@@ -71,15 +71,39 @@ Refer [Snyk CLI](https://snyk.io/docs/using-snyk/) for through understanding.
 Refer [Snyk reports](https://snyk.io/docs/reports)
 
 #### 2. JFrog Xray
-JFrog has JFrog Xray to handle Security Vulnerabilities. Further read can be found here [npm xray](https://jfrog.com/integration/npm-xray/)
+JFrog has JFrog Xray to handle Security Vulnerabilities. Further read can be found here [Xray](https://jfrog.com/integration/npm-xray/)
 
 Xray is integrated with Snyc database. Xray and Snyk work together to detect vulnerabilities during the build process which minimizes the cost of remediation since it can be implemented early in the SDLC. But even if your builds get past Xray and Snyk, new vulnerabilities are discovered all the time. Fortunately, JFrog continuously updates JXray including adding new vulnerabilities from Snyk’s Basic database, and each time your build artifacts are scanned, the latest vulnerabilities will be exposed in JFrog Xray.
 
 Refer: [Snyk Up on Vulnerabilities and Eradicate Them](https://jfrog.com/blog/snyk-vulnerabilities-eradicate/)
 
-**As per our analysis JFrog Xray is better comparted to Snyc.**
+**As per our analysis JFrog Xray is better comparted to Snyk.**
 
 **Pricing model:** Xray will come along with Artifatory from "ARTIFACTORY PRO X" package
 Refer: [Xray pricing](https://jfrog.com/pricing/xray-pricing/)
 
+### Task 5: Outdated Dependencies
+When you pin your dependencies eventually after sometime your project dependencies will be outdate. Either there will be a latest version (or) the version which you are using may not be available anymore for others to install to work on your project.
+To overcome this problem you need monitor your dependencies and update them when needed.
+
+Both npm and yarn have outdated command and also update command to update the dependencies to latest latest version based on the version range specified in the package.json file.
+
+Further read :
+
+**npm** 
+- Refer [How to update local Packages](https://docs.npmjs.com/getting-started/updating-local-packages)
+- Refer [How to update global packages](https://docs.npmjs.com/getting-started/updating-global-packages)
+- Refer [npm check](https://www.npmjs.com/package/npm-check-interactive)
+  - npm check provides and interactive environment to update the outdated dependencicies and notifies unused dependencies.
+- Refer [npm check updates](https://www.npmjs.com/package/npm-check-updates)
+  - npm check update will update dependencies to the latest version regardless of existing version constraints provided in package.json, even package.json will be get updated with new dependency range. You should avoid using this feature, its always better to update and test a particular dependency.
+
+**yarn**
+- Refer [yarn outdated](https://yarnpkg.com/lang/en/docs/cli/outdated/)
+- Refer [yarn update](https://yarnpkg.com/en/docs/cli/upgrade)
+- Refer [yarn update-interactive](https://yarnpkg.com/en/docs/cli/upgrade-interactive)
+  - yarn update-interactive is similar to npm check
+
+#### Third party package
+ - [Greenkeeper](https://greenkeeper.io/)
 

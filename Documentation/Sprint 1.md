@@ -119,3 +119,106 @@ lets discuss why we are going with **Standard Version** when we have **Semantic 
 Refer: [Standard Version](https://www.npmjs.com/package/standard-version)
 
 ### Task 7: Lerna
+
+Installing Lerna : `yarn global add lerna` 
+
+Create a new Lerna repo or upgrade an existing repo to the current version of Lerna : using `--independent` or `--exact` mode
+       `lerna init` (default `--exact`) or `lerna init --independent`
+
+**bootstrap** : `lerna bootstrap`
+
+This command 
+- npm install all external dependencies of each package.
+- Symlink together all Lerna packages that are dependencies of each other.
+- npm run prepublish in all bootstrapped packages.
+- npm run prepare in all bootstrapped packages.
+
+`lerna add <package>[@version] [--dev]` Add local or remote package as dependency to packages in the current Lerna repo.
+
+**lerna publish**
+Creates a new release of the packages that have been updated. Prompts for a new version. Creates a new git commit/tag in the process of publishing to npm.
+
+  Lerna won't publish packages which are marked as private ("private": true in the package.json).
+
+` "publishConfig": {
+
+"access": "public"
+
+}`
+
+**--canary, -c**
+
+`lerna publish --canary
+
+lerna publish --canary=beta`
+
+Before publishing to npm, it creates the new version tag by taking the current version, bumping it to the next minor version, adding the provided meta suffix (defaults to alpha) and appending the current git sha (ex: 1.0.0 becomes 1.1.0-alpha.81e3b443).
+ 
+ **--conventional-commits**
+
+`lerna publish --conventional-commits`
+
+**--git-remote [remote]**
+
+`lerna publish --git-remote upstream`
+
+publish will push the git changes to the specified remote instead of origin
+ 
+
+`--skip-git` publish will publish to npm without running any of the git commands.
+
+`--skip-npm` publish will update all package.json package versions and dependency versions, but it will not actually publish the packages to npm.
+ 
+
+**--force-publish [packages]**
+
+`$ lerna publish --force-publish=package-2,package-4
+
+force publish all packages 
+
+$ lerna publish --force-publish=*`
+
+publish will force publish the specified packages (comma-separated) or all packages using *.
+
+`--yes` skips all confirmation prompts
+
+**--cd-version**
+
+`lerna publish --cd-version (major | minor | patch | premajor | preminor | prepatch | prerelease)`
+
+publish will skip the version selection prompt (in independent mode) and use the next specified semantic version. You must still use the --yes flag to avoid all prompts. 
+
+'--preid' 
+
+`$ lerna publish --cd-version=prerelease
+
+uses the next semantic prerelease version, e.g. 
+
+1.0.0 => 1.0.0-0 
+ 
+$ lerna publish --cd-version=prepatch --preid=next
+
+uses the next semantic prerelease version with a specific prerelease identifier, e.g. 
+
+1.0.0 => 1.0.1-next.0 `
+
+**--message, -m [msg]**
+
+` lerna publish -m "chore(release): publish %s"
+
+commit message = "chore(release): publish v1.0.0" 
+ 
+
+lerna publish -m "chore(release): publish %v"
+
+commit message = "chore(release): publish 1.0.0" 
+ 
+
+lerna publish -m "chore(release): publish" --independent
+
+commit message = "chore(release): publish 
+ 
+
+- package-1@3.0.1 
+
+- package-2@1.5.4" `

@@ -133,10 +133,10 @@ This command
 - npm run prepublish in all bootstrapped packages.
 - npm run prepare in all bootstrapped packages.
 
-**lerna add <package>[@version] [--dev]** 
+**lerna add** <package>[@version] [--dev] 
 Add local or remote package as dependency to packages in the current Lerna repo.
 
-#### **lerna publish**
+### lerna publish
 Creates a new release of the packages that have been updated. Prompts for a new version. Creates a new git commit/tag in the process of publishing to npm.
 
   Lerna won't publish packages which are marked as private ("private": true in the package.json).
@@ -161,12 +161,12 @@ lerna publish --conventional-commits
 
 **--git-remote [remote]**
 
-**lerna publish --git-remote upstream** publish will push the git changes to the specified remote instead of origin
+**lerna publish --git-remote upstream** : Publish will push the git changes to the specified remote instead of origin
  
 
-**--skip-git** publish will publish to npm without running any of the git commands.
+**--skip-git** : Publish will publish to npm without running any of the git commands.
 
-**--skip-npm** publish will update all package.json package versions and dependency versions, but it will not actually publish the packages to npm.
+**--skip-npm** : Publish will update all package.json package versions and dependency versions, but it will not actually publish the packages to npm.
  
 
 **--force-publish [packages]**
@@ -175,7 +175,7 @@ eg: $ lerna publish --force-publish=package-2,package-4  <--publish will force p
 
 $ lerna publish --force-publish=* .   <--  force publish all packages
 
-**--yes** skips all confirmation prompts
+**--yes** : skips all confirmation prompts
 
 **--cd-version**
 
@@ -187,15 +187,11 @@ publish will skip the version selection prompt (in independent mode) and use the
 
 $ lerna publish --cd-version=prerelease
 
-uses the next semantic prerelease version, e.g. 
-
-1.0.0 => 1.0.0-0 
+uses the next semantic prerelease version, e.g. 1.0.0 => 1.0.0-0 
  
 $ lerna publish --cd-version=prepatch --preid=next
 
-uses the next semantic prerelease version with a specific prerelease identifier, e.g. 
-
-1.0.0 => 1.0.1-next.0 
+uses the next semantic prerelease version with a specific prerelease identifier, e.g. 1.0.0 => 1.0.1-next.0 
 
 **--message, -m [msg]**
 

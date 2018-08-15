@@ -204,3 +204,8 @@ lerna publish -m "chore(release): publish %v"
 
 commit message = "chore(release): publish 1.0.0" 
  
+## Note:
+
+__Yarn Publish & Lerna Publish:__
+
+After research came to know that Yarn publish and Lerna publish commands will publish to Yarn repository. -- To push only to GIT we need to us "git push" commands.
